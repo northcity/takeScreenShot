@@ -53,7 +53,7 @@ BCMTakeScreenshotAfterShareView *SV = nil;
     QRBackView.backgroundColor = [UIColor whiteColor];
     UIImageView *imgQR = [[UIImageView alloc]initWithFrame:CGRectMake(0,0, kAUTOWIDTH(101), kAUTOHEIGHT(101))];
     imgQR.center = QRBackView.center;
-    imgQR.image =  [SV generateQRCode:@"https://cc.bankcomm.com/ARsha1" width:101 height:101];
+    imgQR.image =  [SV generateQRCode:@"https://www.baidu.com" width:101 height:101];
     imgQR.backgroundColor =[UIColor redColor];
     
     UILabel *QRLabel = [[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth - kAUTOWIDTH(227), ScreenHeight-kAUTOHEIGHT(39), kAUTOWIDTH(200), kAUTOHEIGHT(20))];

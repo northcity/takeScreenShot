@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "BCMTakeScreenshotAfterShareView.h"
 @interface ViewController ()
 
 @end
@@ -16,9 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    //    截屏通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(jiePingChuli:)
+                                                 name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 }
 
+- (void)jiePingChuli:(NSNotification *)noti{
+    [BCMTakeScreenshotAfterShareView userDidTakeScreenshot:noti];
+    //    [[UIApplication sharedApplication]setStatusBarStyle: UIStatusBarStyleBlackOpaque];
+//    [self statusBarIsLightContentStyle:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

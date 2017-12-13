@@ -10,4 +10,18 @@
 
 @interface UIView (Extension)
 
+/**
+ *    @brief    center.x简写.
+ *  赋值后,center.x = centerX.
+ */
+@property (nonatomic) CGFloat centerX;
+
+/**
+ *    @brief    center.y简写.
+ *  赋值后, center.y = centerY.
+ */
+@property (nonatomic) CGFloat centerY;
+@property (nonatomic) CGFloat bottom;
+@property (nonatomic) CGFloat top;
+@property (nonatomic) CGFloat height;
 @end

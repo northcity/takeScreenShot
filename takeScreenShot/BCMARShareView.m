@@ -246,8 +246,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        isSuccess = @"0";
 //        remarkStr = [remarkStr AppendString:@"未安装微信"];
 //        requestRemark = @"未安装微信";
-//        [self requestEventCollectIsSuccess:isSuccess shareFromPageUrl:_model.rootPageUrl shareToPageUrl:pageUrl shareChanType:requestChanType remark:requestRemark];
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }else{
 //        // 初始化消息
 //        WXMediaMessage *message = [WXMediaMessage message];
@@ -276,8 +274,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //            isSuccess = @"0";
 //        }
 //        //        数据采集
-//        [self requestEventCollectIsSuccess:isSuccess shareFromPageUrl:_model.rootPageUrl shareToPageUrl:pageUrl shareChanType:requestChanType remark:requestRemark];
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }
 //}
 //
@@ -331,8 +327,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        }else{
 //            isSuccess = @"0";
 //        }
-//        [self requestEventCollectIsSuccess:isSuccess shareFromPageUrl:_model.rootPageUrl shareToPageUrl:pageUrl shareChanType:requestChanType remark:requestRemark];
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }
 //}
 //
@@ -374,9 +368,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        //        发送QQ消息
 //        SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent: newsObj];
 //        [QQApiInterface sendReq:req];
-//        //         数据采集
-//        isSuccess = @"1";
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }
 //}
 //
@@ -406,9 +397,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        //            发说说
 //        SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
 //        [QQApiInterface SendReqToQZone:req];
-//        
-//        isSuccess = @"1";
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }
 //}
 //
@@ -425,7 +413,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        [MoreAlertViewUtil showAlertTipsView:NO image:@"wonderIconPop.png" onView:window message:@"您未安装新浪微博"];
 //        remarkStr = [remarkStr AppendString:@"未安装新浪微博"];
 //        isSuccess = @"0";
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }else{
 //        NSString  *imgurl = _model.imageUrl;
 //        NSString * title = _model.title;
@@ -448,7 +435,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //            isSuccess = @"0";
 //        }
 //        //        数据采集
-//        [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:resultEventType];
 //    }
 //}
 //
@@ -475,7 +461,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        [MoreAlertViewUtil showAlertTipsView:NO image:@"wonderIconPop.png" onView:window message:@"设备无法发送短信"];
 //        isSuccess = @"0";
 //    }
-//    [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:@""];
 //}
 //
 //-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
@@ -494,7 +479,7 @@ if ([_model.shareType isEqualToString:@"More"]){
 //                [MoreAlertViewUtil showMyOneBtnAlert:@"分享失败" buttonTitle:@"确定" ];
 //                break;
 //        }
-//        [self EventCollectEventTpye:resultEventType isSuccess:isSuccess remark:remarkStr resultEventType:@""];
+
 //    }];
 //}
 //
@@ -524,7 +509,6 @@ if ([_model.shareType isEqualToString:@"More"]){
 //        UIWindow *window=[UIApplication  sharedApplication].keyWindow;
 //        [MoreAlertViewUtil showAlertTipsView:NO image:@"wonderIconPop.png" onView:window message:@"设备无法发送邮件"];
 //    }
-//    [self EventCollectEventTpye:eventTpyeStr isSuccess:isSuccess remark:remarkStr resultEventType:@""];
 //}
 //
 //- (void)mailComposeController:(MFMailComposeViewController *)controller
@@ -544,7 +528,7 @@ if ([_model.shareType isEqualToString:@"More"]){
 //                [MoreAlertViewUtil showMyOneBtnAlert:@"分享失败" buttonTitle:@"确定" ];
 //                break;
 //        }
-//        [self EventCollectEventTpye:resultEventType isSuccess:isSuccess remark:remarkStr resultEventType:@""];
+
 //    }];
 //}
 //
